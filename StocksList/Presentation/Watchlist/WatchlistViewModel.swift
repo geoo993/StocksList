@@ -1,8 +1,11 @@
-//
-//  WatchlistViewModel.swift
-//  StocksList
-//
-//  Created by GEORGE QUENTIN on 31/12/2022.
-//
+import SwiftUI
 
-import Foundation
+final class ViewModel: ObservableObject {
+    @Published var stocks = [Stock]()
+    
+    private let interactor: WatchlistInteractor
+    
+    init(interactor: WatchlistInteractor = DefaultWatchlistInteractor()) {
+        self.interactor = interactor
+    }
+}

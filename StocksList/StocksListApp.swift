@@ -4,7 +4,7 @@ import SwiftUI
 struct StocksListApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WatchlistView(viewModel: .init())
         }
     }
 }
