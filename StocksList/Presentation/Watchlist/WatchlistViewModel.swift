@@ -9,6 +9,14 @@ final class ViewModel: ObservableObject {
     
     init(interactor: WatchlistInteractor = DefaultWatchlistInteractor()) {
         self.interactor = interactor
+    }
+    
+    deinit {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    func startTimer() {
         timer = Timer.scheduledTimer(
             timeInterval: 10,
             target: self,
@@ -16,11 +24,6 @@ final class ViewModel: ObservableObject {
             userInfo: nil,
             repeats: true
         )
-    }
-    
-    deinit {
-        timer?.invalidate()
-        timer = nil
     }
     
     @objc private func refreshStocksQuote() {

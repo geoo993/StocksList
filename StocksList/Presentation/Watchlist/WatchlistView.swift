@@ -45,6 +45,7 @@ struct WatchlistView: View {
     
     func loadStocks() {
         viewModel.loadStocks()
+        viewModel.startTimer()
     }
     
     func runSearch() {
