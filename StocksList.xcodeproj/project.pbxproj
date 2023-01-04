@@ -46,6 +46,8 @@
 		C78CB3E32964B4B9000F03E0 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB3E22964B4B9000F03E0 /* MockAPIClient.swift */; };
 		C78CB3E62964DBE9000F03E0 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB3E52964DBE9000F03E0 /* StockCell.swift */; };
 		C78CB3E82964DE41000F03E0 /* StockSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB3E72964DE41000F03E0 /* StockSearchCell.swift */; };
+		C793F2B929662A20006CBA9C /* CoreDataContextProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C793F2B829662A20006CBA9C /* CoreDataContextProviding.swift */; };
+		C793F2BB29662BDC006CBA9C /* FavouredStocksRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C793F2BA29662BDC006CBA9C /* FavouredStocksRepositoryTests.swift */; };
 		C7A59915296237F0009260BF /* FetchStockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A59914296237F0009260BF /* FetchStockRequest.swift */; };
 		C7A5991829623868009260BF /* FetchStockRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A599162962383D009260BF /* FetchStockRequestTests.swift */; };
 		C7A5991A2962388C009260BF /* FetchStockRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = C7A599192962388C009260BF /* FetchStockRequest.json */; };
@@ -104,6 +106,9 @@
 		C78CB3E22964B4B9000F03E0 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		C78CB3E52964DBE9000F03E0 /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
 		C78CB3E72964DE41000F03E0 /* StockSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchCell.swift; sourceTree = "<group>"; };
+		C793F2B829662A20006CBA9C /* CoreDataContextProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextProviding.swift; sourceTree = "<group>"; };
+		C793F2BA29662BDC006CBA9C /* FavouredStocksRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouredStocksRepositoryTests.swift; sourceTree = "<group>"; };
+		C793F2BC29663417006CBA9C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C7A59914296237F0009260BF /* FetchStockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStockRequest.swift; sourceTree = "<group>"; };
 		C7A599162962383D009260BF /* FetchStockRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStockRequestTests.swift; sourceTree = "<group>"; };
 		C7A599192962388C009260BF /* FetchStockRequest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FetchStockRequest.json; sourceTree = "<group>"; };
@@ -132,6 +137,7 @@
 			children = (
 				C70540472965A67800D04737 /* StockDataModel.xcdatamodeld */,
 				C705404A2965A76E00D04737 /* PersistenceController.swift */,
+				C793F2B829662A20006CBA9C /* CoreDataContextProviding.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 		C776FFE329607F4A00E2ABD9 = {
 			isa = PBXGroup;
 			children = (
+				C793F2BC29663417006CBA9C /* README.md */,
 				C776FFEE29607F4A00E2ABD9 /* StocksList */,
 				C776FFED29607F4A00E2ABD9 /* Products */,
 			);
@@ -331,6 +338,7 @@
 			children = (
 				C70540552965E19E00D04737 /* Mocks */,
 				C70540562965E1B600D04737 /* StocksRepositoryTests.swift */,
+				C793F2BA29662BDC006CBA9C /* FavouredStocksRepositoryTests.swift */,
 				C70540582965E6B100D04737 /* WatchlistInteractorTests.swift */,
 			);
 			path = Tests;
@@ -455,6 +463,7 @@
 				C776003729609E3400E2ABD9 /* DummyProvider.swift in Sources */,
 				C705405B2965ED9F00D04737 /* MockStocksRepository.swift in Sources */,
 				C776003229609CD900E2ABD9 /* FetchStockQuoteRequestTests.swift in Sources */,
+				C793F2BB29662BDC006CBA9C /* FavouredStocksRepositoryTests.swift in Sources */,
 				C70540572965E1B600D04737 /* StocksRepositoryTests.swift in Sources */,
 				C70540592965E6B100D04737 /* WatchlistInteractorTests.swift in Sources */,
 				C7A5991829623868009260BF /* FetchStockRequestTests.swift in Sources */,
@@ -490,6 +499,7 @@
 				C78CB3CF2964774C000F03E0 /* StocksRepository.swift in Sources */,
 				C776001829608D9500E2ABD9 /* HTTPRequest.swift in Sources */,
 				C776001429608D4C00E2ABD9 /* HTTPMethod.swift in Sources */,
+				C793F2B929662A20006CBA9C /* CoreDataContextProviding.swift in Sources */,
 				C77600032960812400E2ABD9 /* WatchlistInteractor.swift in Sources */,
 				C78CB3E82964DE41000F03E0 /* StockSearchCell.swift in Sources */,
 				C705404B2965A76E00D04737 /* PersistenceController.swift in Sources */,
