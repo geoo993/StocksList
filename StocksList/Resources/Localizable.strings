@@ -1,7 +1,3 @@
-/* 
-  Localizable.strings
-  StocksList
-
-  Created by GEORGE QUENTIN on 03/01/2023.
-  
-*/
+"watchlist__screen" = "Watchlist";
+"watchlist__search_placeholder" = "Search...";
+"watchlist__search_add_cta" = "Add";

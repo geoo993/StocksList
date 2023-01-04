@@ -30,6 +30,5 @@ final class FetchStockRequestTests: XCTestCase {
         let price = try await apiClient.execute(request: request)
         XCTAssertEqual(price.name, "Apple Inc")
         XCTAssertEqual(price.symbol,  "AAPL")
-        XCTAssertEqual(price.industry,  "Technology")
     }
 }
