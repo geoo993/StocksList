@@ -6,6 +6,7 @@ final class ViewModel: ObservableObject {
     @Published var searches = [StockSearch]()
     private let interactor: WatchlistInteractor
     private var timer: Timer?
+    private var tasks = [Task<(), Error>]()
     
     init(interactor: WatchlistInteractor = DefaultWatchlistInteractor()) {
         self.interactor = interactor
@@ -27,9 +28,10 @@ final class ViewModel: ObservableObject {
     }
     
     @objc private func refreshStocksQuote() {
+        cancelTasks()
         var list = stocks
         for (index, item) in list.enumerated() {
-            Task {
+            let task = Task {
                 let price = try await interactor.price(for: item)
                 list[index] = Stock(
                     name: item.name,
@@ -39,7 +41,13 @@ final class ViewModel: ObservableObject {
                 )
                 stocks = list
             }
+            tasks.append(task)
         }
+    }
+    
+    private func cancelTasks() {
+        tasks.forEach { $0.cancel() }
+        tasks = []
     }
     
     func loadStocks() {

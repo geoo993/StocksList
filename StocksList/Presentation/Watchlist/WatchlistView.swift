@@ -29,26 +29,25 @@ struct WatchlistView: View {
                             .onDelete(perform: delete)
                         }
                     }
-                    .buttonStyle(PlainButtonStyle())
+                    .buttonStyle(.plain)
                     .navigationTitle("watchlist__screen")
                     .toolbarBackground(color, for: .navigationBar)
                 }
             }
             .searchable(text: $query, prompt: "watchlist__search_placeholder")
-            .onAppear(perform: loadStocks)
-            .onSubmit(of: .search, runSearch)
-            .onChange(of: query) { _ in
-                runSearch()
-            }
+            .onAppear(perform: load)
+            .onSubmit(of: .search, search)
+            .onChange(of: query) { _ in search() }
+            .refreshable { refresh() }
         }
     }
     
-    func loadStocks() {
+    func load() {
         viewModel.loadStocks()
         viewModel.startTimer()
     }
     
-    func runSearch() {
+    func search() {
         Task {
             await viewModel.search(for: query)
         }
@@ -56,6 +55,10 @@ struct WatchlistView: View {
     
     func delete(at offsets: IndexSet) {
         viewModel.deleteStock(at: offsets)
+    }
+    
+    func refresh() {
+        viewModel.loadStocks()
     }
 }
 
