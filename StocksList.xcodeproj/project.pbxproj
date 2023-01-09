@@ -15,6 +15,10 @@
 		C70540572965E1B600D04737 /* StocksRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70540562965E1B600D04737 /* StocksRepositoryTests.swift */; };
 		C70540592965E6B100D04737 /* WatchlistInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70540582965E6B100D04737 /* WatchlistInteractorTests.swift */; };
 		C705405B2965ED9F00D04737 /* MockStocksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705405A2965ED9F00D04737 /* MockStocksRepository.swift */; };
+		C7238627296B748400221401 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = C7238624296B748400221401 /* Queries.graphql */; };
+		C7238628296B748400221401 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7238625296B748400221401 /* Apollo.swift */; };
+		C7238629296B748400221401 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7238626296B748400221401 /* API.swift */; };
+		C7238631296B811700221401 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = C7238630296B811700221401 /* Apollo */; };
 		C77600032960812400E2ABD9 /* WatchlistInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77600022960812400E2ABD9 /* WatchlistInteractor.swift */; };
 		C77600052960813300E2ABD9 /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77600042960813300E2ABD9 /* WatchlistView.swift */; };
 		C776000A2960823C00E2ABD9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77600092960823C00E2ABD9 /* Error.swift */; };
@@ -73,6 +77,10 @@
 		C70540562965E1B600D04737 /* StocksRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksRepositoryTests.swift; sourceTree = "<group>"; };
 		C70540582965E6B100D04737 /* WatchlistInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistInteractorTests.swift; sourceTree = "<group>"; };
 		C705405A2965ED9F00D04737 /* MockStocksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStocksRepository.swift; sourceTree = "<group>"; };
+		C7238624296B748400221401 /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		C7238625296B748400221401 /* Apollo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		C7238626296B748400221401 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C723862D296B79E800221401 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		C77600022960812400E2ABD9 /* WatchlistInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistInteractor.swift; sourceTree = "<group>"; };
 		C77600042960813300E2ABD9 /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
 		C77600092960823C00E2ABD9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -126,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7238631296B811700221401 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +166,17 @@
 				C78CB3DD2964B1FC000F03E0 /* MockFavouredStocksRepository.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C7238623296B738700221401 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				C723862D296B79E800221401 /* schema.json */,
+				C7238626296B748400221401 /* API.swift */,
+				C7238625296B748400221401 /* Apollo.swift */,
+				C7238624296B748400221401 /* Queries.graphql */,
+			);
+			path = GraphQL;
 			sourceTree = "<group>";
 		};
 		C7760000296080EE00E2ABD9 /* Presentation */ = {
@@ -271,6 +291,7 @@
 		C776FFEE29607F4A00E2ABD9 /* StocksList */ = {
 			isa = PBXGroup;
 			children = (
+				C7238623296B738700221401 /* GraphQL */,
 				C776FFFF296080D700E2ABD9 /* APIClient */,
 				C776FFFD296080B500E2ABD9 /* Data */,
 				C776FFFE296080C100E2ABD9 /* Domain */,
@@ -379,6 +400,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C776FFFA29607F4C00E2ABD9 /* Build configuration list for PBXNativeTarget "StocksList" */;
 			buildPhases = (
+				C7238632296B88ED00221401 /* Generate Apollo GraphQL API */,
 				C776FFE829607F4A00E2ABD9 /* Sources */,
 				C776FFE929607F4A00E2ABD9 /* Frameworks */,
 				C776FFEA29607F4A00E2ABD9 /* Resources */,
@@ -388,6 +410,9 @@
 			dependencies = (
 			);
 			name = StocksList;
+			packageProductDependencies = (
+				C7238630296B811700221401 /* Apollo */,
+			);
 			productName = StocksList;
 			productReference = C776FFEC29607F4A00E2ABD9 /* StocksList.app */;
 			productType = "com.apple.product-type.application";
@@ -420,6 +445,9 @@
 				Base,
 			);
 			mainGroup = C776FFE329607F4A00E2ABD9;
+			packageReferences = (
+				C723862F296B811700221401 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = C776FFED29607F4A00E2ABD9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -442,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7238627296B748400221401 /* Queries.graphql in Resources */,
 				C78CB3CD29647493000F03E0 /* Localizable.strings in Resources */,
 				C77600392960A1C900E2ABD9 /* FetchStockQuoteRequest.json in Resources */,
 				C7A5991A2962388C009260BF /* FetchStockRequest.json in Resources */,
@@ -451,6 +480,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7238632296B88ED00221401 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the \n# Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"GraphQL/schema.json\" GraphQL/API.swift\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C776002029609A4F00E2ABD9 /* Sources */ = {
@@ -478,6 +528,7 @@
 				C78CB3D3296477D8000F03E0 /* Price.swift in Sources */,
 				C70540492965A67800D04737 /* StockDataModel.xcdatamodeld in Sources */,
 				C776001629608D6600E2ABD9 /* HTTPSession.swift in Sources */,
+				C7238628296B748400221401 /* Apollo.swift in Sources */,
 				C78CB3D92964877F000F03E0 /* WatchlistViewModel.swift in Sources */,
 				C78CB3E62964DBE9000F03E0 /* StockCell.swift in Sources */,
 				C77600052960813300E2ABD9 /* WatchlistView.swift in Sources */,
@@ -496,6 +547,7 @@
 				C776FFF029607F4A00E2ABD9 /* StocksListApp.swift in Sources */,
 				C776000A2960823C00E2ABD9 /* Error.swift in Sources */,
 				C70540542965E02700D04737 /* Array+Ext.swift in Sources */,
+				C7238629296B748400221401 /* API.swift in Sources */,
 				C78CB3CF2964774C000F03E0 /* StocksRepository.swift in Sources */,
 				C776001829608D9500E2ABD9 /* HTTPRequest.swift in Sources */,
 				C776001429608D4C00E2ABD9 /* HTTPMethod.swift in Sources */,
@@ -528,9 +580,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.geo-games.StocksListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StocksList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StocksList";
 			};
 			name = Debug;
@@ -546,9 +601,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.geo-games.StocksListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StocksList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StocksList";
 			};
 			name = Release;
@@ -680,8 +738,9 @@
 				INFOPLIST_FILE = StocksList/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,9 +748,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.geo-games.StocksList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -708,8 +770,9 @@
 				INFOPLIST_FILE = StocksList/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -717,9 +780,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.geo-games.StocksList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -754,6 +820,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C723862F296B811700221401 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.28.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7238630296B811700221401 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C723862F296B811700221401 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C70540472965A67800D04737 /* StockDataModel.xcdatamodeld */ = {
