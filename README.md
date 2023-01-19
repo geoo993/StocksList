@@ -9,7 +9,7 @@ A stocks app that displays price and percentage changes
     - Data Layer - for getting data from APIClient and CoreData and using an interactor to handle data request/access from datasources. 
     - Domain Layer - for the entities/models of stocks, it doesnt know anything about any other layer and they are the least likely to change when something external changes.
     - Presentation Layer - for the ViewModel and Views, brings together the domain entities and interaction with data layer
-- Async/await with good usage of structured concurency and Task closures
+- Async/await with good usage of structured concurency
 - SwiftUI 
     - Searchbar with search functionality
     - List with rows of each stock

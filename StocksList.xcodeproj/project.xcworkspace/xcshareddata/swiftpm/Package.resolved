@@ -1,30 +1,48 @@
 {
   "pins" : [
     {
-      "identity" : "apollo-ios",
+      "identity" : "amplify-swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apollographql/apollo-ios",
+      "location" : "https://github.com/aws-amplify/amplify-swift",
       "state" : {
-        "revision" : "e847d7594763e8662339be181e3f69c01cf09d8b",
-        "version" : "0.28.0"
+        "revision" : "cb5124b9984097c62fd4f318e079a21cf3541d9c",
+        "version" : "2.2.1"
       }
     },
     {
-      "identity" : "pathkit",
+      "identity" : "aws-appsync-realtime-client-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kylef/PathKit.git",
+      "location" : "https://github.com/aws-amplify/aws-appsync-realtime-client-ios.git",
       "state" : {
-        "revision" : "e2f5be30e4c8f531c9c1e8765aa7b71c0a45d7a0",
-        "version" : "0.9.2"
+        "revision" : "da88cf1cab82e281e7277cd9feb9efc87a057041",
+        "version" : "2.1.1"
       }
     },
     {
-      "identity" : "spectre",
+      "identity" : "aws-crt-swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kylef/Spectre.git",
+      "location" : "https://github.com/awslabs/aws-crt-swift.git",
       "state" : {
-        "revision" : "f79d4ecbf8bc4e1579fbd86c3e1d652fb6876c53",
-        "version" : "0.9.2"
+        "revision" : "1846c60b9d50034f684384d8eef5e5aef7c40d6b",
+        "version" : "0.3.1"
+      }
+    },
+    {
+      "identity" : "aws-sdk-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/awslabs/aws-sdk-swift.git",
+      "state" : {
+        "revision" : "3a2b88928888b90feeec203137642fee7f1329e2",
+        "version" : "0.5.0"
+      }
+    },
+    {
+      "identity" : "smithy-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/awslabs/smithy-swift.git",
+      "state" : {
+        "revision" : "e4285fe2b80bcc4eabe67f82b1c84344ec86124d",
+        "version" : "0.5.0"
       }
     },
     {
@@ -32,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/stephencelis/SQLite.swift.git",
       "state" : {
-        "revision" : "0a9893ec030501a3956bee572d6b4fdd3ae158a1",
-        "version" : "0.12.2"
+        "revision" : "5f5ad81ac0d0a0f3e56e39e646e8423c617df523",
+        "version" : "0.13.2"
       }
     },
     {
@@ -41,17 +59,35 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/daltoniam/Starscream",
       "state" : {
-        "revision" : "a063fda2b8145a231953c20e7a646be254365396",
-        "version" : "3.1.2"
+        "revision" : "df8d82047f6654d8e4b655d1b1525c64e1059d21",
+        "version" : "4.0.4"
       }
     },
     {
-      "identity" : "stencil",
+      "identity" : "swift-collections",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/stencilproject/Stencil.git",
+      "location" : "https://github.com/apple/swift-collections",
       "state" : {
-        "revision" : "0e9a78d6584e3812cd9c09494d5c7b483e8f533c",
-        "version" : "0.13.1"
+        "revision" : "937e904258d22af6e447a0b72c0bc67583ef64a2",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "6fe203dc33195667ce1759bf0182975e4653ba1c",
+        "version" : "1.4.4"
+      }
+    },
+    {
+      "identity" : "xmlcoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MaxDesiatov/XMLCoder.git",
+      "state" : {
+        "revision" : "c438dad94f6a243b411b70a4b4bac54595064808",
+        "version" : "0.15.0"
       }
     }
   ],
