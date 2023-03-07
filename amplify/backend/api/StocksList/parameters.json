@@ -1,6 +1,0 @@
-{
-  "AppSyncApiName": "StocksList",
-  "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2023-01-15T16:02:46.533Z"
-}
