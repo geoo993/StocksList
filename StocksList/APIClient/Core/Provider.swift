@@ -7,12 +7,12 @@ extension APIClient {
 }
 
 extension APIClient.Provider {
-    var baseUrl: URL {
+    var baseUrl: URL? {
         switch self {
         case .finnhub:
-            return URL(string: "https://finnhub.io")!
+            return URL(string: "https://finnhub.io")
         case .marketaux:
-            return URL(string: "https://api.marketaux.com")!
+            return URL(string: "https://api.marketaux.com")
         }
     }
     
