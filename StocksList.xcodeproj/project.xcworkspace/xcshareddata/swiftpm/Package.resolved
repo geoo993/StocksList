@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "gqswiftcoresdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/geoo993/GQSwiftCoreSDK.git",
+      "state" : {
+        "revision" : "954614cf3dccf660bd555daaa46599d02f817737",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}

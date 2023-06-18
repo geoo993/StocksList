@@ -1,4 +1,5 @@
 import SwiftUI
+import GQSwiftCoreSDK
 
 @MainActor
 final class ViewModel: ObservableObject {
@@ -76,7 +77,7 @@ final class ViewModel: ObservableObject {
     func deleteStock(at offsets: IndexSet) {
         guard
             let index = Array(offsets).first,
-            let stock = stocks[safe:index]
+            let stock = stocks[safe: index]
         else { return }
         do {
             try interactor.delete(stock: stock)

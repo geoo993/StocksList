@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		C70540492965A67800D04737 /* StockDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C70540472965A67800D04737 /* StockDataModel.xcdatamodeld */; };
 		C705404B2965A76E00D04737 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705404A2965A76E00D04737 /* PersistenceController.swift */; };
-		C705404D2965A88700D04737 /* Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705404C2965A88700D04737 /* Unwrap.swift */; };
 		C70540512965C4F300D04737 /* StockSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70540502965C4F300D04737 /* StockSearch.swift */; };
-		C70540542965E02700D04737 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70540532965E02700D04737 /* Array+Ext.swift */; };
 		C70540572965E1B600D04737 /* StocksRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70540562965E1B600D04737 /* StocksRepositoryTests.swift */; };
 		C70540592965E6B100D04737 /* WatchlistInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70540582965E6B100D04737 /* WatchlistInteractorTests.swift */; };
 		C705405B2965ED9F00D04737 /* MockStocksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705405A2965ED9F00D04737 /* MockStocksRepository.swift */; };
@@ -48,11 +46,10 @@
 		C78CB3E82964DE41000F03E0 /* StockSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB3E72964DE41000F03E0 /* StockSearchCell.swift */; };
 		C793F2B929662A20006CBA9C /* CoreDataContextProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C793F2B829662A20006CBA9C /* CoreDataContextProviding.swift */; };
 		C793F2BB29662BDC006CBA9C /* FavouredStocksRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C793F2BA29662BDC006CBA9C /* FavouredStocksRepositoryTests.swift */; };
+		C79B85412A3F652C0013CCB8 /* GQSwiftCoreSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C79B85402A3F652C0013CCB8 /* GQSwiftCoreSDK */; };
 		C7A59915296237F0009260BF /* FetchStockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A59914296237F0009260BF /* FetchStockRequest.swift */; };
 		C7A5991829623868009260BF /* FetchStockRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A599162962383D009260BF /* FetchStockRequestTests.swift */; };
 		C7A5991A2962388C009260BF /* FetchStockRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = C7A599192962388C009260BF /* FetchStockRequest.json */; };
-		C7E1A0E829732C310050C7B6 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1A0E729732C310050C7B6 /* Loading.swift */; };
-		C7E1A0EA29732C510050C7B6 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1A0E929732C510050C7B6 /* AnyError.swift */; };
 		C7E1A0EC29732DD80050C7B6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1A0EB29732DD80050C7B6 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,10 +66,8 @@
 /* Begin PBXFileReference section */
 		C70540482965A67800D04737 /* StockDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StockDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C705404A2965A76E00D04737 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		C705404C2965A88700D04737 /* Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unwrap.swift; sourceTree = "<group>"; };
 		C705404F2965B10100D04737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C70540502965C4F300D04737 /* StockSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearch.swift; sourceTree = "<group>"; };
-		C70540532965E02700D04737 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		C70540562965E1B600D04737 /* StocksRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksRepositoryTests.swift; sourceTree = "<group>"; };
 		C70540582965E6B100D04737 /* WatchlistInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistInteractorTests.swift; sourceTree = "<group>"; };
 		C705405A2965ED9F00D04737 /* MockStocksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStocksRepository.swift; sourceTree = "<group>"; };
@@ -115,8 +110,6 @@
 		C7A59914296237F0009260BF /* FetchStockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStockRequest.swift; sourceTree = "<group>"; };
 		C7A599162962383D009260BF /* FetchStockRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStockRequestTests.swift; sourceTree = "<group>"; };
 		C7A599192962388C009260BF /* FetchStockRequest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FetchStockRequest.json; sourceTree = "<group>"; };
-		C7E1A0E729732C310050C7B6 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
-		C7E1A0E929732C510050C7B6 /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
 		C7E1A0EB29732DD80050C7B6 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79B85412A3F652C0013CCB8 /* GQSwiftCoreSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,16 +142,6 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		C70540522965E01200D04737 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				C7E1A0E929732C510050C7B6 /* AnyError.swift */,
-				C70540532965E02700D04737 /* Array+Ext.swift */,
-				C7E1A0E729732C310050C7B6 /* Loading.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		C70540552965E19E00D04737 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +154,6 @@
 		C7760000296080EE00E2ABD9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				C70540522965E01200D04737 /* Utilities */,
 				C78CB3E42964DBDB000F03E0 /* Views */,
 				C7760001296080FE00E2ABD9 /* Watchlist */,
 			);
@@ -356,7 +339,6 @@
 		C78CB3E42964DBDB000F03E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C705404C2965A88700D04737 /* Unwrap.swift */,
 				C78CB3E52964DBE9000F03E0 /* StockCell.swift */,
 				C78CB3E72964DE41000F03E0 /* StockSearchCell.swift */,
 				C7E1A0EB29732DD80050C7B6 /* ErrorView.swift */,
@@ -406,6 +388,7 @@
 			);
 			name = StocksList;
 			packageProductDependencies = (
+				C79B85402A3F652C0013CCB8 /* GQSwiftCoreSDK */,
 			);
 			productName = StocksList;
 			productReference = C776FFEC29607F4A00E2ABD9 /* StocksList.app */;
@@ -440,6 +423,7 @@
 			);
 			mainGroup = C776FFE329607F4A00E2ABD9;
 			packageReferences = (
+				C79B853F2A3F652C0013CCB8 /* XCRemoteSwiftPackageReference "GQSwiftCoreSDK" */,
 			);
 			productRefGroup = C776FFED29607F4A00E2ABD9 /* Products */;
 			projectDirPath = "";
@@ -505,21 +489,17 @@
 				C77600052960813300E2ABD9 /* WatchlistView.swift in Sources */,
 				C776001E2960981B00E2ABD9 /* APIClientRequestable.swift in Sources */,
 				C776001C2960974200E2ABD9 /* Provider.swift in Sources */,
-				C7E1A0EA29732C510050C7B6 /* AnyError.swift in Sources */,
 				C776001229608C6000E2ABD9 /* HTTPCode.swift in Sources */,
 				C776000E296082B200E2ABD9 /* APIClient.Price.swift in Sources */,
 				C776001A2960958300E2ABD9 /* FetchStockQuoteRequest.swift in Sources */,
 				C78CB3D729648428000F03E0 /* FavouredStocksRepository.swift in Sources */,
 				C78CB3D1296477CC000F03E0 /* Stock.swift in Sources */,
-				C705404D2965A88700D04737 /* Unwrap.swift in Sources */,
-				C7E1A0E829732C310050C7B6 /* Loading.swift in Sources */,
 				C70540512965C4F300D04737 /* StockSearch.swift in Sources */,
 				C7760010296082DB00E2ABD9 /* APIClient.swift in Sources */,
 				C7A59915296237F0009260BF /* FetchStockRequest.swift in Sources */,
 				C776000C2960829D00E2ABD9 /* APIClient.Stock.swift in Sources */,
 				C776FFF029607F4A00E2ABD9 /* StocksListApp.swift in Sources */,
 				C776000A2960823C00E2ABD9 /* Error.swift in Sources */,
-				C70540542965E02700D04737 /* Array+Ext.swift in Sources */,
 				C78CB3CF2964774C000F03E0 /* StocksRepository.swift in Sources */,
 				C776001829608D9500E2ABD9 /* HTTPRequest.swift in Sources */,
 				C776001429608D4C00E2ABD9 /* HTTPMethod.swift in Sources */,
@@ -792,6 +772,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C79B853F2A3F652C0013CCB8 /* XCRemoteSwiftPackageReference "GQSwiftCoreSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/geoo993/GQSwiftCoreSDK.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C79B85402A3F652C0013CCB8 /* GQSwiftCoreSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79B853F2A3F652C0013CCB8 /* XCRemoteSwiftPackageReference "GQSwiftCoreSDK" */;
+			productName = GQSwiftCoreSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C70540472965A67800D04737 /* StockDataModel.xcdatamodeld */ = {
